@@ -1,11 +1,13 @@
-package com.iniciandoaviddadev.pokeapi
+package com.iniciandoaviddadev.pokeapi.presentation.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
+import com.iniciandoaviddadev.pokeapi.R
 import com.iniciandoaviddadev.pokeapi.databinding.ActivityPokeListBinding
+import com.iniciandoaviddadev.pokeapi.presentation.viewmodel.PokeListViewModel
 import com.squareup.picasso.Picasso
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -41,10 +43,14 @@ class PokeListActivity : AppCompatActivity() {
 
                     when {
                         it.types?.get(0)?.type?.name.toString() == "bug" -> {
-                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this, R.color.bug))
+                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this,
+                                R.color.bug
+                            ))
                         }
                         it.types?.get(0)?.type?.name.toString() == "dark" -> {
-                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this, R.color.dark))
+                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this,
+                                R.color.dark
+                            ))
                         }
                         it.types?.get(0)?.type?.name.toString() == "dragon" -> {
                             binding.textType1.setBackgroundColor(
@@ -79,7 +85,9 @@ class PokeListActivity : AppCompatActivity() {
                             )
                         }
                         it.types?.get(0)?.type?.name.toString() == "fire" -> {
-                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this, R.color.fire))
+                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this,
+                                R.color.fire
+                            ))
                         }
                         it.types?.get(0)?.type?.name.toString() == "flying" -> {
                             binding.textType1.setBackgroundColor(
@@ -114,7 +122,9 @@ class PokeListActivity : AppCompatActivity() {
                             )
                         }
                         it.types?.get(0)?.type?.name.toString() == "ice" -> {
-                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this, R.color.ice))
+                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this,
+                                R.color.ice
+                            ))
                         }
                         it.types?.get(0)?.type?.name.toString() == "normal" -> {
                             binding.textType1.setBackgroundColor(
@@ -141,7 +151,9 @@ class PokeListActivity : AppCompatActivity() {
                             )
                         }
                         it.types?.get(0)?.type?.name.toString() == "rock" -> {
-                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this, R.color.rock))
+                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this,
+                                R.color.rock
+                            ))
                         }
                         it.types?.get(0)?.type?.name.toString() == "steel" -> {
                             binding.textType1.setBackgroundColor(
@@ -172,10 +184,14 @@ class PokeListActivity : AppCompatActivity() {
 
                     when {
                         it.types?.get(0)?.type?.name.toString() == "bug" -> {
-                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this, R.color.bug))
+                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this,
+                                R.color.bug
+                            ))
                         }
                         it.types?.get(0)?.type?.name.toString() == "dark" -> {
-                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this, R.color.dark))
+                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this,
+                                R.color.dark
+                            ))
                         }
                         it.types?.get(0)?.type?.name.toString() == "dragon" -> {
                             binding.textType1.setBackgroundColor(
@@ -210,7 +226,9 @@ class PokeListActivity : AppCompatActivity() {
                             )
                         }
                         it.types?.get(0)?.type?.name.toString() == "fire" -> {
-                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this, R.color.fire))
+                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this,
+                                R.color.fire
+                            ))
                         }
                         it.types?.get(0)?.type?.name.toString() == "flying" -> {
                             binding.textType1.setBackgroundColor(
@@ -245,7 +263,9 @@ class PokeListActivity : AppCompatActivity() {
                             )
                         }
                         it.types?.get(0)?.type?.name.toString() == "ice" -> {
-                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this, R.color.ice))
+                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this,
+                                R.color.ice
+                            ))
                         }
                         it.types?.get(0)?.type?.name.toString() == "normal" -> {
                             binding.textType1.setBackgroundColor(
@@ -272,7 +292,9 @@ class PokeListActivity : AppCompatActivity() {
                             )
                         }
                         it.types?.get(0)?.type?.name.toString() == "rock" -> {
-                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this, R.color.rock))
+                            binding.textType1.setBackgroundColor(ContextCompat.getColor(this,
+                                R.color.rock
+                            ))
                         }
                         it.types?.get(0)?.type?.name.toString() == "steel" -> {
                             binding.textType1.setBackgroundColor(

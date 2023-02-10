@@ -1,16 +1,13 @@
-package com.iniciandoaviddadev.pokeapi
+package com.iniciandoaviddadev.pokeapi.data.datasource
 
+import com.iniciandoaviddadev.pokeapi.data.response.PokemonResponse
+import com.iniciandoaviddadev.pokeapi.data.api.PokeListService
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import okhttp3.OkHttpClient
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
-class PokeListRemoteDataSource (private val pokeListService: PokeListService) {
+class PokeListRemoteDataSource(private val pokeListService: PokeListService) {
 
-    fun pokemonCatcher(name: String): Flow<PokemonResponse?> {
-        return flow {
-            emit(pokeListService.callPokemons(name))
-        }
+    suspend fun pokemonCatcher(name: String): PokemonResponse? {
+        return pokeListService.callPokemons(name)
     }
 }

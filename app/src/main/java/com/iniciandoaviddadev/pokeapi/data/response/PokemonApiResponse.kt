@@ -1,6 +1,5 @@
-package com.iniciandoaviddadev.pokeapi
+package com.iniciandoaviddadev.pokeapi.data.response
 
-import com.google.gson.annotations.JsonAdapter
 import com.google.gson.annotations.SerializedName
 
 //Listagem

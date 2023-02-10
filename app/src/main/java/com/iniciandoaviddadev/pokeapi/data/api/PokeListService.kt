@@ -1,8 +1,8 @@
-package com.iniciandoaviddadev.pokeapi
+package com.iniciandoaviddadev.pokeapi.data.api
 
+import com.iniciandoaviddadev.pokeapi.data.response.PokemonResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
-import retrofit2.http.Query
 
 interface PokeListService {
     @GET("pokemon/{name}")

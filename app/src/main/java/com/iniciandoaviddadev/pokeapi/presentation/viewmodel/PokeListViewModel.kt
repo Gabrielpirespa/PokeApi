@@ -1,29 +1,23 @@
-package com.iniciandoaviddadev.pokeapi
+package com.iniciandoaviddadev.pokeapi.presentation.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.onCompletion
+import com.iniciandoaviddadev.pokeapi.data.response.PokemonResponse
+import com.iniciandoaviddadev.pokeapi.domain.usecase.PokeListUseCase
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 
 class PokeListViewModel(private val pokeListUseCase: PokeListUseCase) : ViewModel() {
-    val pokemon = MutableLiveData<PokemonResponse?> (null)
+    val pokemon = MutableLiveData<PokemonResponse?>(null)
     val vision = MutableLiveData(false)
 
     fun pokemonPasser(name: String) {
         viewModelScope.launch {
-            pokeListUseCase.pokemonCatcher(name)
-                .onStart {
-                    vision.value = false
-                }
-                .collect {
-                    pokemon.value = it
-                    vision.value = true
-                }
-
+            vision.value = false
+            pokemon.value = pokeListUseCase.pokemonCatcher(name)
+            vision.value = true
         }
+
     }
 }

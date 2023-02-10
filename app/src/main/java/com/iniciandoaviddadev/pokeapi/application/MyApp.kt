@@ -1,6 +1,8 @@
-package com.iniciandoaviddadev.pokeapi
+package com.iniciandoaviddadev.pokeapi.application
 
 import android.app.Application
+import com.iniciandoaviddadev.pokeapi.networkModule
+import com.iniciandoaviddadev.pokeapi.pokeListModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
